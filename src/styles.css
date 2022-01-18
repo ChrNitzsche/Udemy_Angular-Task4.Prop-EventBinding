@@ -1,0 +1,8 @@
+/* Add application styles & imports to this file! */
+ul li {
+  list-style: none;
+}
+
+ol li {
+  font-size: small;
+}

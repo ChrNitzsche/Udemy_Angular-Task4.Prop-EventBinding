@@ -1,0 +1,39 @@
+<h1>Udemy: Angular: Task 4</h1>
+<h3>Property- & Event-Binding</h3>
+
+<ol>
+  <li>Create three new components: GameControl, Odd and Even</li>
+  <li>
+    The GameControl Component should have buttons to start and stop the game
+  </li>
+  <li>
+    When starting the game, an event (holding a incrementing number) should get
+    emitted each second (ref = setInterval())
+  </li>
+  <li>The event should be listenable from outside the component</li>
+  <li>
+    When stopping the game, no more events should get emitted
+    (clearInterval(ref))
+  </li>
+  <li>
+    A new Odd component should get created for every odd number (ungerade Zahl)
+    emitted, the same should happen for the Even Component on even numbers
+    (gerade Zahlen)
+  </li>
+  <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
+  <li>
+    Style the element (e.g. paragraph) holding your output text differently in
+    both components
+  </li>
+</ol>
+
+<hr />
+
+<app-game-control
+  (onIncrementCounter)="onCounterIncreased($event)"
+></app-game-control>
+<ul>
+  <app-odd *ngFor="let oddNr of oddArray" [number]="oddNr"></app-odd>
+  <div *ngIf="evenArray.length" class="lineTop"></div>
+  <app-even *ngFor="let evenNr of evenArray" [number]="evenNr"></app-even>
+</ul>

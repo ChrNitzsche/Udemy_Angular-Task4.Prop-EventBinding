@@ -1,0 +1,21 @@
+h1 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+h3 {
+  margin-top: 0;
+}
+
+:host {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+li {
+  margin-right: 50px;
+}
+
+.lineTop {
+  border: 1px solid lightblue;
+  width: 15px;
+}
